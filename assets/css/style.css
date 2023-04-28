@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root{
+    --primary-color: rgb(148, 129, 22);
+    --primary-color-lighter: rgb(211, 204, 154);
+    --primary-color-darker: rgb(128, 111, 19);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  background-color: white;
+  font-family: 'Secular One', sans-serif;
+  color: black;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.head{
+  display: grid;
+  position: relative;
+  text-align: center;
+}
+  
+.head h1 {
+  margin-top: 7%;
+  margin-bottom: 0.5%;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+  
+.head h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 6%;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.botao_darkmode, .botao_lightmode{
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  display: block;
+  width: fit-content;
+  height: fit-content;
+}
+.botao_darkmode{
+  transition: 0.6s;
+  top: 10%;
+  left: 10%;
+}
+
+.botao_darkmode:hover{
+  background-color: #252525;
+  color: rgb(104, 197, 189);
+  border: 1px solid rgb(107, 201, 191);
+}
+
+.botao_lightmode{
+  top: 10%;
+  left: 17%;
+  transition: 0.6s;
+}
+
+.botao_lightmode:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(184, 187, 23) ;
+  border: 1px solid var(--primary-color);
+}
+
+.opcoes{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-top: 2%;
+}
+
+.opcoes li{
+  margin: 0.5%;
+}
+
+.opcoes li button{
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  padding: 6px;
+  color: var(--primary-color-darker);
+  background-color: transparent;
+  border-radius: 6px;
+  border: solid 1px var(--primary-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.opcoes li button:hover{
+  background-color: var(--primary-color-lighter);
+}
+
+.tabela-cardapio{
+  margin: 1.5% 13%;
+}
+
+.coluna{
+  margin-top: 20%;
+  display: block;
+  width: 200px;
+  height: auto;
+  border: solid 2px var(--primary-color);
+  border-radius: 6px;
+}
+
+.coluna-descricao{
+  width: 30%;
+  height: 15%;
+  vertical-align:top;
+}
+
+.descricao-titulo{
+  width: 100%;
+  margin-top: 10%;
+}
+
+.descricao-titulo::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #b6b5b5;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.imagens{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nomes{
+  display: inline-block;
+  font-family: 'Mukta', sans-serif;
+  letter-spacing: 3px;
+  font-size: medium;
+  margin-left: 5%;
+}
+
+.preços{
+  text-align: right;
+  margin-left: 7%;
+  display: inline-block;
+  font-size: medium;
+  color: var(--primary-color);
+}
+
+.descricao{
+  display: block;
+  margin: 2% 5%;
+  font-family: 'Quicksand', sans-serif;
+  font-size:  0.7em;
+  color: #252525;
+}
